@@ -68,7 +68,6 @@ function App() {
       setLoginErrMessage(error.response?.data);
       console.log(error.response);
     }
-
   };
 
   const handleInputChange = (e, formName) => {
@@ -530,8 +529,8 @@ function App() {
                     )}
 
                     <div className="d-flex flex-wrap justify-content-center">
-                      {tempProductData.imagesUrl.map((photo) => (
-                        <div className="m-1">
+                      {tempProductData.imagesUrl.map((photo, index) => (
+                        <div className="m-1" key={`photo_${index}`}>
                           <img
                             onClick={() => setPrimaryImage(photo)}
                             src={photo}
@@ -838,8 +837,8 @@ function App() {
                         </div>
                       </div>
                     )}
-                    {tempProductData.imagesUrl.map((pic) => (
-                      <div className="position-relative">
+                    {tempProductData.imagesUrl.map((pic, index) => (
+                      <div className="position-relative" key={`image_${index}`}>
                         <div className="images-thumbnails">
                           <img
                             src={pic}
