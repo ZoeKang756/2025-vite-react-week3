@@ -25,12 +25,25 @@ img {
 }
 
 .primary-image {
-  height: 300px;
-  width:400px;
+  height: 400px;
+  width:500px;
 }
 
 .images {
   height: 100px;
   width:100px;
   margin: 5px;
+}
+
+.images-thumbnails {
+  height: 160px;
+  width:160px;
+  margin: 5px;
+  overflow: hidden;
+  background-color: #EEE;
+}
+
+.images-thumbnail img{
+  object-fit:cover;
+  object-position: center;
 }
